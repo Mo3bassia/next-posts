@@ -1,20 +1,20 @@
-import { storePost } from '@/lib/posts';
+import { storePost } from "@/lib/posts";
 
 export default function NewPostPage() {
   async function createPost(formData) {
     "use server";
-    const title = formData.get('title');
-    const image = formData.get('image');
-    const content = formData.get('content');
+    const title = formData.get("title");
+    const image = formData.get("image");
+    const content = formData.get("content");
 
     storePost({
-      imageUrl: '',
       title,
+      imageUrl:
+        "https://watanimg.elwatannews.com/image_archive/original_lower_quality/13791576141688568769.jpg",
       content,
-      userId: 1
-    })
+      userId: 2,
+    });
   }
-
   return (
     <>
       <h1>Create a new post</h1>
