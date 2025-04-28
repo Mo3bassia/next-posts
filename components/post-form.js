@@ -4,6 +4,7 @@ import FormSubmit from "./form-submit";
 
 export default function PostForm({ action }) {
   const [state, formAction] = useFormState(action, {});
+  console.log(state);
   return (
     <>
       <h1>Create a new post</h1>
@@ -28,9 +29,9 @@ export default function PostForm({ action }) {
         <p className="form-actions">
           <FormSubmit />
         </p>
-        {state.errors && (
+        {state?.errors && state?.errors.length > 0 && (
           <ul className="form-errors">
-            {state.errors.map((error) => (
+            {state?.errors.map((error) => (
               <li key={error}>{error}</li>
             ))}
           </ul>
