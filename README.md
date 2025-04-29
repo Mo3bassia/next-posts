@@ -1,6 +1,6 @@
 # 🚀 Next Posts - Modern Social Media App
 
-> Experience the live demo: [Next Posts App](https://next-posts-mo3bassias-projects.vercel.app)
+> Experience the live demo: [Next Posts App](https://next-posts-mo3bassia-mo3bassias-projects.vercel.app)
 
 A modern social media application built with Next.js 15, showcasing modern web development practices and real-time interactions.
 
@@ -44,7 +44,7 @@ CLOUDINARY_API_SECRET=your_api_secret
 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/next-posts.git
+git clone https://github.com/Mo3bassia/next-posts.git
 cd next-posts
 ```
 
@@ -96,7 +96,7 @@ Visit `http://localhost:3000` to see the app.
 
 ## 🔗 Links
 
-- [Live Demo](https://next-posts-mo3bassias-projects.vercel.app)
+- [Live Demo](https://next-posts-mo3bassia-mo3bassias-projects.vercel.app)
 - [GitHub Repository](https://github.com/Mo3bassia/next-posts)
 
 ## 🤝 Contributing
