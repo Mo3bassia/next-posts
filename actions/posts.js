@@ -1,5 +1,5 @@
 "use server";
-import { uploadImage } from "@/lib/cloudinaryCofnig";
+import { uploadImage } from "@/lib/cloudinaryConfig";
 import { storePost, updatePostLikeStatus } from "@/lib/posts";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
