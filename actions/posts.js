@@ -1,6 +1,7 @@
 "use server";
+import { uploadImage } from "@/lib/cloudinary";
 import { storePost } from "@/lib/posts";
-import { redirect } from "next/dist/server/api-utils";
+import { redirect } from "next/navigation";
 
 export async function createPost(state, formData) {
   const title = formData.get("title");
@@ -22,13 +23,20 @@ export async function createPost(state, formData) {
       errors,
     };
   }
+  let imageUrl;
+  try {
+    imageUrl = await uploadImage(image);
+  } catch {
+    throw new Error(
+      "Image upload failed, post was not created. Please try again later."
+    );
+  }
 
   await storePost({
     title,
-    imageUrl:
-      "https://watanimg.elwatannews.com/image_archive/original_lower_quality/13791576141688568769.jpg",
+    imageUrl,
     content,
     userId: 2,
   });
-  //   redirect(`/feed`);
+  redirect(`/feed`);
 }
