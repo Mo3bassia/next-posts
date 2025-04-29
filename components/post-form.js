@@ -4,7 +4,6 @@ import FormSubmit from "./form-submit";
 
 export default function PostForm({ action }) {
   const [state, formAction] = useActionState(action, {});
-  console.log(state);
   return (
     <>
       <h1>Create a new post</h1>

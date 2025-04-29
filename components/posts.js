@@ -65,7 +65,6 @@ export default function Posts({ posts }) {
   if (!optimisticPosts || optimisticPosts.length === 0) {
     return <p>There are no posts yet. Maybe start sharing some?</p>;
   }
-  console.log(optimisticPosts);
 
   return (
     <ul className="posts">
